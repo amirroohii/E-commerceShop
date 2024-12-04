@@ -1,0 +1,238 @@
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+        }
+
+        .nav {
+            list-style-type: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav li {
+            position: relative;
+        }
+
+        .nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+        }
+
+        .shop-button {
+            background-color: #444;
+            border: none;
+            color: white;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+  
+.carousel {
+    max-width: 100%;
+    margin: auto; /* Center the carousel */
+}
+
+.carousel-inner {
+    width: 100%; /* Ensure items take full width */
+}
+
+.carousel-item img {
+    width: 100%; /* Scale images */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.carousel-indicators li {
+    width: 15px;
+    height: 15px;
+    margin: 0 3px 12px 3px;
+    background: transparent;
+    border: 1px solid #838383;
+    transition: .5s;
+}
+
+.carousel-indicators .active {
+    width: 30px;
+    background: #838383;
+}
+
+.hero {
+    background: url('hero.jpg') center/cover no-repeat;
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.hero h1 {
+    font-size: 48px;
+}
+
+.hero p {
+    font-size: 24px;
+}
+
+.hero button {
+    background-color: #ff5722;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.featured-products {
+    text-align: center; /* Center text within the section */
+    padding: 20px; /* Padding around the section */
+    background-color: #f7f7f7; /* Light background for the section */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Box shadow for depth */
+}
+
+.featured-products h2 {
+    margin-bottom: 20px; /* Space below heading */
+    font-size: 2em; /* Size of the heading */
+    color: #333; /* Dark color for the heading */
+}
+
+.product-list {
+    display: flex; /* Flexbox layout */
+    justify-content: space-between; /* Space between products */
+    flex-wrap: wrap; /* Wrap products to new line if necessary */
+}
+
+.product-card {
+    position: relative; /* Position for overlay */
+    width: 18%; /* Adjust based on your design */
+    margin: 10px; /* Space around each product card */
+    transition: transform 0.3s; /* Smooth scaling effect */
+    border-radius: 5px; /* Rounded corners for the product card */
+    overflow: hidden; /* Hide overflow for nice effect */
+}
+
+.product-card img {
+    width: 100%; /* Full width for images */
+    border-radius: 5px; /* Rounded corners for images */
+}
+
+.product-card h3 {
+    margin: 10px 0 5px; /* Space around product title */
+    font-size: 1.2em; /* Size of the title */
+    color: #555; /* Product title color */
+}
+
+.product-card p {
+    margin: 0 0 10px; /* Space below price */
+    font-weight: bold; /* Bold price */
+    color: #333; /* Price color */
+}
+
+.overlay {
+    position: absolute; /* Position for overlay */
+    top: 0; /* Align to top */
+    left: 0; /* Align to left */
+    right: 0; /* Stretch to the right */
+    bottom: 0; /* Stretch to the bottom */
+    background: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
+    opacity: 0; /* Hidden by default */
+    display: flex; /* Flexbox for overlay content */
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+    flex-direction: column; /* Stack buttons vertically */
+    transition: opacity 0.3s; /* Smooth transition for opacity */
+}
+
+.product-card:hover {
+    transform: scale(1.05); /* Slightly enlarge the card on hover */
+}
+
+.product-card:hover .overlay {
+    opacity: 1; /* Show overlay on hover */
+}
+
+.overlay button {
+    background: #fff; /* White background for buttons */
+    border: none; /* No border */
+    color: #333; /* Dark text color */
+    padding: 10px 15px; /* Button padding */
+    margin: 5px; /* Space between buttons */
+    border-radius: 5px; /* Rounded corners for buttons */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background 0.3s; /* Smooth background transition */
+}
+
+.overlay button:hover {
+    background: #ddd; /* Change background color on hover */
+}
+
+/* Carousel Controls */
+.carousel-control-prev,
+.carousel-control-next {
+    background: rgba(255, 255, 255, 0.5); /* Light background for controls */
+    border-radius: 50%; /* Circular controls */
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background: #333; /* Dark control icons */
+    border-radius: 50%; /* Circular icon */
+    padding: 10px; /* Space around icon */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .product-card {
+        width: 45%; /* Adjust width for tablets */
+    }
+}
+
+@media (max-width: 480px) {
+    .product-card {
+        width: 100%; /* Full width for very small screens */
+    }
+}
+
+/*.products {*/
+/*    padding: 50px 20px;*/
+/*}*/
+
+/*.product-list {*/
+/*    display: flex;*/
+/*    justify-content: space-around;*/
+/*    flex-wrap: wrap;*/
+/*}*/
+
+/*.product-card {*/
+/*    border: 1px solid #ccc;*/
+/*    border-radius: 8px;*/
+/*    padding: 20px;*/
+/*    text-align: center;*/
+/*    width: 200px;*/
+/*    margin: 10px;*/
+/*}*/
+
+/*.product-card img {*/
+/*    max-width: 100%;*/
+/*    border-radius: 8px;*/
+/*}*/
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.social-media a {
+    margin: 0 10px;
+    color: white;
+}
