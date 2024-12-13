@@ -70,7 +70,6 @@
                          {% for product in group  %}
                              <div class="product-card">
                         <img src="{{ product.image.url }}" alt="Product 1">
-{#                        <h3>{{ product.title }}</h3>#}
                                  <h3>
     {{ product.title|slice:":30" }}{% if product.title|length > 30 %}...{% endif %}
 </h3>
@@ -89,11 +88,33 @@
 
         </div>
         <br><br>
-        <!-- Dots/Stick Indicators -->
-        <ol class="carousel-indicators" style="text-align: center">
-            <li data-target="#product-carousel" data-slide-to="0" class="active" style="color: #333333"></li>
-            <li data-target="#product-carousel" data-slide-to="1" style="color: #333333"></li>
-        </ol>
+    /* From Uiverse.io by LightAndy1 */
+<div class="wrapper">
+  <div class="option">
+    <input checked="" value="option1" name="btn" type="radio" class="input" />
+    <div class="btn">
+      <span class="span">Option</span>
+    </div>
+  </div>
+  <div class="option">
+    <input value="option2" name="btn" type="radio" class="input" />
+    <div class="btn">
+      <span class="span">Option</span>
+    </div>
+  </div>
+  <div class="option">
+    <input value="option3" name="btn" type="radio" class="input" />
+    <div class="btn">
+      <span class="span">Option</span>
+    </div>
+  </div>
+</div>
+
+{#        <!-- Dots/Stick Indicators -->#}
+{#        <ol class="carousel-indicators" style="text-align: center">#}
+{#            <li data-target="#product-carousel" data-slide-to="0" class="active" style="color: #333333"></li>#}
+{#            <li data-target="#product-carousel" data-slide-to="1" style="color: #333333"></li>#}
+{#        </ol>#}
     </div>
 </section>
 

@@ -1,0 +1,82 @@
+
+    <div class="row align-items-center bg-light py-3 px-xl-5">
+        <div class="col-6 col-lg-4 d-none d-lg-block">
+            <a class="text-decoration-none" href="">
+                <span class="h1 text-uppercase text-primary bg-dark px-2">Multi</span>
+                <span class="h1 text-uppercase text-dark bg-primary px-2 ml-n1">Shop</span>
+            </a>
+        </div>
+        <div class="col-6 col-lg-4 text-center">
+             <form class="form-inline">
+                            <input class="form-control mr-sm-2" type="search" placeholder="Search for products" aria-label="Search">
+                            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                        </form>
+        </div>
+
+                    <div class="navbar-nav ml-auto py-0">
+                                           {% if request.user.is_authenticated %}
+                    <div class="col-12 col-lg-4 text-right mt-2 mt-lg-0">
+                        <div class="relative inline-block text-left">
+                            <button id="dropdownButton" class="flex items-center bg-gray-700 hover:bg-gray-600 transition-colors h-10 py-0 px-3 rounded-lg" onclick="toggleDropdown()">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" class="text-white">
+                                    <path fill="none" d="M0 0h24v24H0z"></path>
+                                    <path fill="currentColor" d="M12 13.172l4.95-4.95 1.414 1.414L12 16 5.636 9.636 7.05 8.222z"></path>
+                                </svg>
+                                <div class="flex items-center gap-2 ml-2">
+                                    <span class="text-lg text-white font-semibold">{{ request.user.username }}</span>
+                                    {% if request.user.avatar %}
+                                        <img src="{{ request.user.avatar.url }}" alt="User profile" class="w-9 h-9 rounded-md">
+                                        {% else %}
+                                        <img src="/static/img/default-img.png" class="w-9 h-9 rounded-md">
+                                        {% endif %}
+                                </div>
+                            </button>
+                            <nav id="dropdownMenu" class="hidden absolute right-0 mt-2 w-48 bg-gray-700 rounded-lg shadow-lg z-50">
+                                <ul class="py-1">
+                                    {% if request.user.is_superuser %}
+                                    <li>
+                                        <a class="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-600 hover:text-white" href="admin/">
+                                            <i class="fas fa-tools"></i> Admin Panel
+                                        </a>
+                                    </li>
+                                    {% endif %}
+                                    <li>
+                                        <a class="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-600 hover:text-white" href="#">
+                                            <i class="fas fa-user"></i> Your Profile
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-600 hover:text-white" href="#">
+                                            <i class="fas fa-heart"></i> Your Favorites
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a target="_blank" rel="noopener" class="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-600 hover:text-white" href="#">
+                                            <i class="fas fa-comment-dots"></i> Send feedback
+                                        </a>
+                                    </li>
+                                    <li class="border-t border-gray-600"></li>
+                                    <li>
+                                        <a target="_blank" rel="noopener" class="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-600 hover:text-white" href="#">
+                                            <i class="fab fa-discord"></i> Join Discord
+                                        </a>
+                                    </li>
+                                    <li class="border-t border-gray-600"></li>
+                                    <li>
+                                        <a href="{% url 'logout' %}" class="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-600 hover:text-white">
+                                            <i class="fas fa-sign-out-alt"></i> Log out
+                                        </a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                    {% else %}
+                    <div class="login">
+                        <a href="{% url 'login' %}" class="block px-4 py-2 text-sm text-black-300 hover:bg-gray-600 hover:text-white">Log In</a> /
+                        <a href="{% url 'signup' %}" class="block px-4 py-2 text-sm text-black-300 hover:bg-gray-600 hover:text-white">Sign Up</a>
+                    </div>
+                    {% endif %}
+
+                    </div>
+    </div>

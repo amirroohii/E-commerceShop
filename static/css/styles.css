@@ -36,8 +36,167 @@
             padding: 10px;
             cursor: pointer;
         }
+.relative {
+    position: relative;
+}
 
-  
+.absolute {
+    position: absolute;
+}
+
+.inline-block {
+    display: inline-block;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.bg-gray-700 {
+    background-color: #4a5568;
+}
+
+.hover\:bg-gray-600:hover {
+    background-color: #2d3748;
+}
+
+.transition-colors {
+    transition: background-color 0.3s;
+}
+
+.h-10 {
+    height: 2.5rem;
+}
+
+.py-0 {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.px-3 {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+}
+
+.rounded-lg {
+    border-radius: 0.5rem;
+}
+
+.text-white {
+    color: #ffffff;
+}
+
+.flex {
+    display: flex;
+}
+
+.items-center {
+    align-items: center;
+}
+
+.gap-2 {
+    gap: 0.5rem;
+}
+
+.ml-2 {
+    margin-left: 0.5rem;
+}
+
+.w-9 {
+    width: 2.25rem;
+}
+
+.h-9 {
+    height: 2.25rem;
+}
+
+.rounded-md {
+    border-radius: 0.375rem;
+}
+
+.mt-2 {
+    margin-top: 0.5rem;
+}
+
+.w-48 {
+    width: 12rem;
+}
+
+.shadow-lg {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.py-1 {
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+}
+
+.px-4 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.text-sm {
+    font-size: 0.875rem;
+}
+
+.text-gray-300 {
+    color: #d1d5db;
+}
+
+.hover\:bg-gray-600:hover {
+    background-color: #4a5568;
+}
+
+.hover\:text-white:hover {
+    color: #ffffff;
+}
+
+.border-t {
+    border-top-width: 1px;
+}
+
+.border-gray-600 {
+    border-color: #4a5568;
+}
+
+.w-full {
+    width: 100%;
+}
+
+.block {
+    display: block;
+}
+.hidden {
+    display: none;
+}
+
+      .login {
+            display: flex; /* Use flexbox for alignment */
+            justify-content: flex-end; /* Align items to the right */
+            gap: 10px; /* Space between buttons */
+        }
+
+        .login-button,
+        .signup-button {
+            background-color: #007bff; /* Bootstrap primary color */
+            color: white; /* Text color */
+            border: none; /* Remove border */
+            padding: 10px 15px; /* Padding for the buttons */
+            font-size: 16px; /* Font size */
+            border-radius: 5px; /* Rounded corners */
+            cursor: pointer; /* Pointer cursor on hover */
+            transition: background-color 0.3s; /* Transition for hover effect */
+        }
+
+        .login-button:hover,
+        .signup-button:hover {
+            background-color: #1f2937; /* Darker shade on hover */
+        }
 .carousel {
     max-width: 100%;
     margin: auto; /* Center the carousel */
@@ -80,6 +239,7 @@
 .hero p {
     font-size: 24px;
 }
+
 
 .hero button {
     background-color: #ff5722;
@@ -236,3 +396,4 @@ footer {
     margin: 0 10px;
     color: white;
 }
+
