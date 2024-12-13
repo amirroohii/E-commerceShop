@@ -1,0 +1,28 @@
+<!-- category_menu.html -->
+<div class="mega-menu">
+    <div class="category">
+        <ul>
+            {% for category in categories %}
+                <li>
+                    <a href="#">{{ category.title }}</a>
+                    {% if category.children.all %}
+                        <ul>
+                            {% for subcategory in category.children.all %}
+                                <li>
+                                    <a href="#">{{ subcategory.title }}</a>
+                                    {% if subcategory.children.all %}
+                                        <ul>
+                                            {% for sub_subcategory in subcategory.children.all %}
+                                                <li><a href="#">{{ sub_subcategory.title }}</a></li>
+                                            {% endfor %}
+                                        </ul>
+                                    {% endif %}
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    {% endif %}
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+</div>

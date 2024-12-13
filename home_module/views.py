@@ -2,8 +2,9 @@ from lib2to3.fixes.fix_input import context
 
 from django.shortcuts import render
 from django.views.generic import TemplateView
+from unicodedata import category
 
-from product_module.models import Product, ProductGallery
+from product_module.models import Product, ProductGallery, ProductCategory
 from utils.convertors import group_list
 
 
@@ -22,3 +23,8 @@ class HomeView(TemplateView):
         context['short_product_name'] = Product.objects
         context['latest_product'] = group_list(latest_product,5)
         return context
+
+
+def category_menu(request):
+    categories= ProductCategory.objects.filter(is_active=True,parent=None).all()
+    return render(request,'home_module/category_menu.html',{'categories':categories})

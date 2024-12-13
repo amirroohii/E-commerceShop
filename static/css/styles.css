@@ -3,32 +3,133 @@
             margin: 0;
             font-family: Arial, sans-serif;
         }
+.top-bar {
+    background-color: #333333; /* Replace with your desired color */
+    color: white; /* Text color for better contrast */
+}
 
-        .header {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            background-color: #333;
-            color: white;
-            padding: 10px 20px;
-        }
+.top-bar a {
+    color: white; /* Ensure links are white for visibility */
+}
 
-        .nav {
-            list-style-type: none;
-            display: flex;
-            gap: 20px;
-        }
+.top-bar .bg-gray-700 {
+    background-color: #333333; /* Adjust dropdown background color if needed */
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 
-        .nav li {
-            position: relative;
-        }
+body {
+    font-family: Arial, sans-serif;
+}
 
-        .nav a {
-            color: white;
-            text-decoration: none;
-            padding: 10px;
-        }
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 10px 20px;
+    position: relative;
+}
 
+.logo {
+    color: #ffffff;
+    font-size: 100px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    position: relative;
+}
+
+.nav-links a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 15px 20px;
+    display: block;
+}
+
+.nav-links a:hover {
+    background-color: #575757;
+}
+
+.mega-menu {
+    display: none;
+    position: absolute;
+    background-color: #444;
+    padding: 20px;
+    width: 600px;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+    border-radius: 4px;
+}
+
+.nav-links li:hover .mega-menu {
+    display: block;
+}
+
+.category {
+    margin-right: 40px;
+}
+
+.category h3 {
+    color: #ffffff;
+}
+
+.category ul {
+    list-style: none;
+}
+
+.category li a {
+    color: #ffffff;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger .bar {
+    height: 3px;
+    width: 25px;
+    background-color: #ffffff;
+    margin: 4px 0;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        background-color: #333;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        z-index: 10;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .mega-menu {
+        position: static;
+        width: 100%;
+    }
+}
         .shop-button {
             background-color: #444;
             border: none;

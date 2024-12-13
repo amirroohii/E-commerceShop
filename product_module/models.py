@@ -2,6 +2,7 @@ from django.db import models
 
 # Create your models here.
 class ProductCategory(models.Model):
+    parent = models.ForeignKey('self', null=True, blank=True, on_delete=models.CASCADE, related_name='children')
     title = models.CharField(max_length=300, db_index=True)
     url_title = models.CharField(max_length=300, db_index=True)
     is_active = models.BooleanField(default=True,)
