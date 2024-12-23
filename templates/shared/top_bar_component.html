@@ -19,7 +19,11 @@
                         </svg>
                         <div class="flex items-center gap-2 ml-2">
                             <span class="text-lg font-semibold">{{ request.user.username }}</span>
-                            <img src="{{ request.user.avatar.url|default:'/static/img/default-img.png' }}" alt="User profile" class="w-9 h-9 rounded-md">
+                            {% if request.user.avatar %}
+                                <img src="{{ request.user.avatar.url|default:'/static/img/default-img.png' }}" alt="User profile" class="w-9 h-9 rounded-md">
+                                {% else %}
+                                <p>no photo</p>
+                            {% endif %} 
                         </div>
                     </button>
                     <nav id="dropdownMenu" class="hidden absolute right-0 mt-2 w-48 bg-gray-700 rounded-lg shadow-lg z-50">
