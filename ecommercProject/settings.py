@@ -34,6 +34,7 @@ INSTALLED_APPS = [
     'accounts.apps.AccountsConfig',
     'home_module.apps.HomeModuleConfig',
     'product_module.apps.ProductModuleConfig',
+    'chat.apps.ChatConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -102,7 +103,7 @@ AUTHENTICATION_BACKENDS = [
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'EshopDB',
+        'NAME': 'ShopDB',
         'USER': 'postgres',
         'PASSWORD': '12345',
         'HOST': 'localhost',

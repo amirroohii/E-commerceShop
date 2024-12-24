@@ -46,9 +46,16 @@
                                 </a>
                             </li>
                             <li>
-                                <a target="_blank" rel="noopener" class="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-600 hover:text-white" href="#">
-                                    <i class="fas fa-comment-dots"></i> Send feedback
-                                </a>
+                                {% if  request.user.is_superuser%}
+                                    <a target="_blank" rel="noopener" class="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-600 hover:text-white" href="{% url 'admin_chat_list' %}">
+                                        <i class="fas fa-comment-dots"></i> Chat
+                                    </a>
+                                    {% else %}
+                                    <a target="_blank" rel="noopener" class="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-600 hover:text-white" href="{% url 'user_chat' %}">
+                                        <i class="fas fa-comment-dots"></i> Chat
+                                    </a>
+                                {% endif %} 
+                              
                             </li>
                             <li class="border-t border-gray-600"></li>
                             <li>

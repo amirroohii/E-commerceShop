@@ -5,10 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5b564b2c-9bab-4696-96fc-1b6bc4b1cdc9" name="Changes" comment="1.0.4(chat room)">
-      <change afterPath="$PROJECT_DIR$/ecommercProject/routing.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chat/templates/chat/admin_chat.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chat/templates/chat/admin_chat_list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chat/templates/chat/user_chat.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chat/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecommercProject/asgi.py" beforeDir="false" afterPath="$PROJECT_DIR$/ecommercProject/asgi.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat_room/migrations/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/chat/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat_room/tests.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/ecommercProject/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/ecommercProject/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecommercProject/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/ecommercProject/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/styles.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/shared/top_bar_component.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/shared/top_bar_component.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -24,16 +30,16 @@
       <list>
         <option value="JavaScript File" />
         <option value="CSS File" />
-        <option value="HTML File" />
         <option value="Dockerfile" />
         <option value="Python Script" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="chat_room" />
+        <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -57,7 +63,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.pycharm.django.structure.promotion.once.per.project&quot;: &quot;true&quot;,
     &quot;django.template.preview.state&quot;: &quot;SHOW_EDITOR_AND_PREVIEW&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;mini__chat&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/Users/roohi/OneDrive/Desktop/onlineshop-template/eshop&quot;,
     &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
@@ -162,6 +168,7 @@
       <workItem from="1734899177815" duration="33000" />
       <workItem from="1734899282404" duration="1859000" />
       <workItem from="1734954754978" duration="363000" />
+      <workItem from="1735044024025" duration="2246000" />
     </task>
     <task id="LOCAL-00001" summary="1.0.0">
       <option name="closed" value="true" />

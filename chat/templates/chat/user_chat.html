@@ -1,0 +1,20 @@
+{% extends 'shared/_layout.html' %}
+
+{% block page_title %}چت با پشتیبانی{% endblock %}
+{% block content %}
+<h2>چت با پشتیبانی</h2>
+<div class="chat-messages">
+    {% for message in messages %}
+        <div class="message {% if message.is_from_admin %}admin{% else %}user{% endif %}">
+            <strong>{% if message.is_from_admin %}admin{% else %}{{ message.user.username }}{% endif %}:</strong>
+            <p>{{ message.message }}</p>
+            <small>{{ message.timestamp }}</small>
+        </div>
+    {% endfor %}
+</div>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">ارسال پیام</button>
+</form>
+{% endblock %}

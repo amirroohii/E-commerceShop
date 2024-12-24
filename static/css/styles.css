@@ -498,3 +498,29 @@ footer {
     color: white;
 }
 
+.chat-messages {
+    max-height: 400px;
+    overflow-y: auto;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.message {
+    margin-bottom: 10px;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.message.user {
+    background-color: #e6f3ff;
+}
+
+.message.admin {
+    background-color: #ffe6e6;
+}
+
+.message strong {
+    display: block;
+    margin-bottom: 5px;
+}
