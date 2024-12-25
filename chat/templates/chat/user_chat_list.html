@@ -1,0 +1,39 @@
+{% extends 'shared/_layout.html' %}
+
+{% block page_title %}Chat with Admins{% endblock %}
+
+{% block content %}
+<div class="card">
+  <p class="title">Who to follow</p>
+  <div class="user__container">
+      {% for admin in admins %}
+      	    <div class="user">
+      <div class="image">
+                        {% if admin.avatar %}
+                                <img src="{{ admin.avatar.url }}" alt="User profile" class="w-9 h-9 rounded-md">
+                                {% else %}
+                                <img src="/static/img/defautl.png" alt="User profile" class="w-9 h-9 rounded-md">
+                            {% endif %}
+      </div>
+      <div class="user__content">
+        <div class="text">
+          <span class="name">{{ admin.username }}</span>
+          <p class="username">@{{ admin.username }}</p>
+        </div>
+        <button class="follow" onclick="startChat({{ admin.id }})"> start chat</button>
+      </div>
+
+    </div>
+
+      {% endfor %}
+
+<script>
+    function startChat(adminId){
+        window.location.href = "{% url 'chat_view' 0 %}".replace('0', adminId);
+    }
+</script>
+
+  </div>
+</div>
+
+{% endblock %}

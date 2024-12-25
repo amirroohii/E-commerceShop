@@ -1,0 +1,173 @@
+.card-container {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 15px;
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  width: 280px;
+}
+.card-header {
+    display: flex;
+    align-items: center;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+.card-header .img-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 20px;
+    background-color: #333;
+}
+
+.card-header .text-chat {
+    color: black;
+    margin: 0;
+    font-size: 20px;
+}
+
+.card-body {
+    flex: 1;
+    overflow-y: auto;
+}
+
+.messages-container {
+    padding: 15px;
+    max-height: 400px; /* حداکثر ارتفاع برای بخش پیام‌ها */
+    overflow-y: auto; /* اضافه کردن اسکرول عمودی */
+    border: 1px solid #ccc; /* اضافه کردن حاشیه برای تفکیک */
+    border-radius: 5px; /* حاشیه‌های گرد */
+    background-color: #fff; /* رنگ پس‌زمینه سفید */
+}
+
+.message-box {
+    padding: 10px;
+    margin-bottom: 5px;
+    border-radius: 10px;
+}
+
+.message-box.left {
+    background-color: #f1f1f1;
+    color: black;
+    font-size: 13px;
+    left: 0;
+}
+
+.message-box.right {
+    background-color: #333;
+    color: #fff;
+    font-size: 13px;
+    right: 0;
+}
+
+.message-input {
+    padding: 5px;
+    border-top: 1px solid #ccc;
+}
+
+.message-input .message-send {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    resize: none;
+}
+
+.message-input .button-send {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    margin-left: 10px;
+    border-radius: 10px;
+    font-size: 13px;
+}
+
+.message-input .button-send:hover {
+    background-color: #f1f1f1;
+    color: #333;
+}
+
+.card {
+  width: 350px;
+  height: 350px;
+  background: #E8EAEA;
+  border-radius: 15px;
+  display: flex;
+        overflow-y: auto;
+
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.title, .more {
+  padding: 10px 15px;
+}
+
+.user {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 15px;
+}
+
+.user__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.user__container {
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  font-weight: 900;
+  font-size: 1.3em;
+}
+
+.name {
+  font-weight: 800;
+}
+
+.username {
+  font-size: .9em;
+  color: #64696e;
+}
+
+.image {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+
+.follow {
+  border: none;
+  border-radius: 25px;
+  background-color: #0f1113;
+  color: white;
+  padding: 8px 15px;
+  font-weight: 700;
+}
+
+
+
+.user:hover {
+  background-color: #b3b6b6;
+}
+
+.more:hover {
+  background-color: #b3b6b6;
+  border-radius: 0px 0px 15px 15px;
+}
+
+.follow:hover {
+  background-color: #2c3136;
+}

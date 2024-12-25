@@ -1,10 +1,38 @@
-{% extends 'admin/base_site.html' %}
+{% extends 'shared/_layout.html' %}
+
+{% block page_title %}User Chat List{% endblock %}
 
 {% block content %}
-<h2>لیست چت‌های کاربران</h2>
-<ul>
-    {% for user in users %}
-        <li><a href="{% url 'admin_chat' user.id %}">{{ user.username }}</a></li>
-    {% endfor %}
-</ul>
+    <div class="card">
+  <p class="title">Admin Chat List</p>
+  <div class="user__container">
+      {% for user in users %}
+      	    <div class="user">
+      <div class="image">
+                            {% if user.avatar %}
+                                <img src="{{ user.avatar.url }}" alt="User profile" class="w-9 h-9 rounded-md">
+                                {% else %}
+                                <img src="/static/img/defautl.png" alt="User profile" class="w-9 h-9 rounded-md">
+                            {% endif %}
+      </div>
+      <div class="user__content">
+        <div class="text">
+          <span class="name">{{ user.first_name }}</span>
+          <p class="username">@{{ user.username }}</p>
+        </div>
+        <button class="follow" onclick="startChat({{ user.id }})"> start chat</button>
+      </div>
+
+    </div>
+
+      {% endfor %}
+  </div>
+    <script>
+function startChat(userId) {
+    window.location.href = "{% url 'chat_view' 0 %}".replace('0', userId);
+}
+    </script>
+</div>
+
 {% endblock %}
+

@@ -1,0 +1,32 @@
+{% extends 'shared/_layout.html'  %}
+{% load tz %}
+
+{% block page_title  %}Chat with {{ admin_user.username }}{% endblock %}
+
+{% block content %}
+<div class="card-container">
+  <div class="card-header">
+    <div class="img-avatar"></div>
+    <div class="text-chat">Chat with {{ admin_user.username }}</div>
+  </div>
+  <div class="card-body">
+    <div class="messages-container" id="messages">
+        {% for message in messages %}
+            <div class="message-box {% if message.is_from_admin %}right{% else %}left{% endif %}">
+                <p><strong>{% if message.is_from_admin %}{{ message.admin.username }}{% else %}{{ message.user.username }}{% endif %}:</strong> {{ message.message }}</p>
+{#                <em>{{ message.timestamp}}</em>#}
+            <em>{{ message.timestamp|timezone:"Asia/Tehran"|date:"H:i Y-m-d" }}</em>
+
+            </div>
+        {% endfor %}
+    </div>
+    <div class="message-input">
+      <form method="POST">
+        {% csrf_token %}
+        <textarea placeholder="Type your message here" class="message-send" name="message" required></textarea>
+        <button type="submit" class="button-send">Send</button>
+      </form>
+    </div>
+  </div>
+</div>
+{% endblock %}

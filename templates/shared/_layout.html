@@ -4,26 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block page_title %}{% endblock %}</title>
-    <link rel="stylesheet" href="/static/css/styles.css">
-    <link rel="stylesheet" href="/static/css/products.css">
-    <link rel="stylesheet" href="/static/css/authenticate.css">
-    <link rel="stylesheet" href="/static/css/login.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-
+  {% include 'shared/include/header_refrences.html' %}
+{% block extera_css %}
+{% endblock %}
 </head>
 <body>
 <div class="layout-container">
-    {% include 'shared/header_component.html' %}
+    {% include 'shared/include/header_component.html' %}
 
 {% block content %}
 {% endblock %}
-{% include 'shared/footer_component.html' %}
-
-
-
+{% include 'shared/include/footer_component.html' %}
 </div>
     <script src="/static/js/scripts.js"></script>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>

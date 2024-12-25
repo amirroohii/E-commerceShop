@@ -20,9 +20,9 @@
                         <div class="flex items-center gap-2 ml-2">
                             <span class="text-lg font-semibold">{{ request.user.username }}</span>
                             {% if request.user.avatar %}
-                                <img src="{{ request.user.avatar.url|default:'/static/img/default-img.png' }}" alt="User profile" class="w-9 h-9 rounded-md">
+                                <img src="{{ request.user.avatar.url }}" alt="User profile" class="w-9 h-9 rounded-md">
                                 {% else %}
-                                <p>no photo</p>
+                                <img src="/static/img/defautl.png" alt="User profile" class="w-9 h-9 rounded-md">
                             {% endif %} 
                         </div>
                     </button>
@@ -30,7 +30,7 @@
                         <ul class="py-1">
                             {% if request.user.is_superuser %}
                             <li>
-                                <a class="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-600 hover:text-white" href="admin/">
+                                <a class="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-600 hover:text-white" href="/admin/">
                                     <i class="fas fa-tools"></i> Admin Panel
                                 </a>
                             </li>
@@ -47,14 +47,14 @@
                             </li>
                             <li>
                                 {% if  request.user.is_superuser%}
-                                    <a target="_blank" rel="noopener" class="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-600 hover:text-white" href="{% url 'admin_chat_list' %}">
+                                    <a target="_blank" rel="noopener" class="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-600 hover:text-white" href="{% url 'admin_chat_list_view' %}">
                                         <i class="fas fa-comment-dots"></i> Chat
                                     </a>
                                     {% else %}
-                                    <a target="_blank" rel="noopener" class="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-600 hover:text-white" href="{% url 'user_chat' %}">
+                                    <a target="_blank" rel="noopener" class="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-600 hover:text-white" href="{% url 'user_chat_list_view' %}">
                                         <i class="fas fa-comment-dots"></i> Chat
                                     </a>
-                                {% endif %} 
+                                {% endif %}
                               
                             </li>
                             <li class="border-t border-gray-600"></li>
