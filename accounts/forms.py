@@ -11,12 +11,7 @@ class RegisterForm(forms.ModelForm):
 
     class Meta:
         model = User
-        fields = ('first_name', 'last_name', 'email','username','password', 'confirm_password')
-        widgets = {
-            'first_name': forms.TextInput(attrs={'class': 'input','type':'text','required': 'required'}),
-            'last_name': forms.TextInput(attrs={'class': 'input','type':'text' ,'required': 'required'}),
-            'email': forms.EmailInput(attrs={'class': 'input','type':'email','required': 'required'}),
-        }
+        fields = ('username','password', 'confirm_password')
 
     def clean_confirm_password(self):
         password = self.cleaned_data.get('password')

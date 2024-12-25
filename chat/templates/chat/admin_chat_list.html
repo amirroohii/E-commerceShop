@@ -17,7 +17,11 @@
       </div>
       <div class="user__content">
         <div class="text">
-          <span class="name">{{ user.first_name }}</span>
+            {% if user.first_name %}
+                <span class="name">{{ user.first_name }}</span>
+                {% else %}
+                <span class="name">{{ user.username}}</span>
+            {% endif %}
           <p class="username">@{{ user.username }}</p>
         </div>
         <button class="follow" onclick="startChat({{ user.id }})"> start chat</button>
